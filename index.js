@@ -3,7 +3,7 @@ const request = require('request');
 const querystring = require('querystring');
 const AWS = require("aws-sdk");
 const secretKey = process.env.SECRET;
-
+const contactformapi = process.env.CONTACTFORMAPI
 
 exports.handler = (event, context, callback) => {
   // Validate the recaptcha
@@ -37,6 +37,13 @@ exports.handler = (event, context, callback) => {
   }
 
   console.log('Retrieved body content is:', body)
+
+  const submitContactForm = new request(contactformapi, {
+    method: 'POST',
+    // NOTE: change this setting in production
+    mode: 'no-cors',
+    body: JSON.stringify(body)
+  })
 
   const req = https.request(options, (res) => {
     res.setEncoding('utf8');
