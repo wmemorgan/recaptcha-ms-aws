@@ -1,0 +1,22 @@
+{
+  "name": "recaptcha-ms-aws",
+  "version": "0.3.0",
+  "description": "reCAPTCHA Microservice on the AWS Lambda platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmemorgan/recaptcha-ms-aws.git"
+  },
+  "author": "Wilfred Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wmemorgan/recaptcha-ms-aws/issues"
+  },
+  "homepage": "https://github.com/wmemorgan/recaptcha-ms-aws#readme",
+  "dependencies": {
+    "request": "^2.87.0"
+  }
+}
