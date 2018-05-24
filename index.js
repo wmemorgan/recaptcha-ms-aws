@@ -26,6 +26,17 @@ exports.handler = (event, context, callback) => {
     }
   };
 
+  const body = {
+    name: input_data['name'],
+    company: input_data['company'],
+    email: input_data['email'],
+    phone: input_data['phone'],
+    subject: 'From WILFREMORGAN.COM',
+    message: input_data['message']
+  }
+
+  console.log('Retrieved body content is:', body)
+
   const req = https.request(options, (res) => {
     res.setEncoding('utf8');
     res.on('data', (chunk) => {
